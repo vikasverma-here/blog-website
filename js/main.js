@@ -1,6 +1,9 @@
-const he = document.getElementById("index")
-he.addEventListener("click",(e)=>{
-  he.style.backgroundColor="yellow"
-  console.log("index")
-})
-  
+
+
+const hamburgerIcon = document.querySelector('.hamburger-icon');
+const navList = document.querySelector('nav ul');
+
+
+hamburgerIcon.addEventListener('click', () => {
+    navList.classList.toggle('show');
+});
