@@ -7,7 +7,45 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <h1 class="create">create</h1>
+
+
+    <div class="editor-container">
+   
+        <input type="text" id="title" placeholder="Enter the title here..." class="title-input">
+    
+      
+        <textarea id="description" placeholder="Enter a short description..." class="description-input"></textarea>
+    
+       
+        <div class="toolbar">
+          <button onclick="formatText('bold')" title="Bold"><b>B</b></button>
+          <button onclick="formatText('italic')" title="Italic"><i>I</i></button>
+          <button onclick="formatText('underline')" title="Underline"><u>U</u></button>
+          <button onclick="formatText('insertUnorderedList')" title="Bullet List">• List</button>
+          <select onchange="formatBlock(this.value)" title="Headings">
+            <option value="">Normal</option>
+            <option value="H1">Heading 1</option>
+            <option value="H2">Heading 2</option>
+            <option value="H3">Heading 3</option>
+          </select>
+        </div>
+    
+        <div contenteditable="true" class="editor" id="editor">
+          Start writing your content here...
+        </div>
+    
+        
+        <div class="file-upload">
+          <label for="fileInput">Upload Files:</label>
+          <input type="file" id="fileInput" multiple>
+        </div>
+    
+    
+        <button onclick="submitContent()" class="submit-btn">Submit</button>
+    
+        
+        <div id="post-list" class="post-list"></div>
+      </div>
 
     <script src="/js/editor.js"></script>
 </body>

@@ -19,7 +19,9 @@ header {
   position: relative;
 }
 
-
+main{
+  padding:0 50px;
+}
 
 
 
@@ -87,8 +89,6 @@ section#home {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
-  background-color: #f9f9f9; 
   
 }
 
@@ -114,7 +114,7 @@ section#home {
 .left .btn {
   padding: 10px 20px;
   background-color: #007bff;
-  width: 150px;
+  width: 200px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -329,6 +329,184 @@ a:hover {
 
 
 
+
+/* When the menu is toggled (visible) */
+nav ul.show {
+  display: flex; /* Show the navigation menu */
+}
+
+
+/* rich text ediitor ======= */
+.editor-container {
+  width: 60%;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.title-input, .description-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+.toolbar button, .toolbar select {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.editor {
+  min-height: 200px;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.file-upload {
+  margin: 15px 0;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.post-list {
+  margin-top: 20px;
+}
+
+.post {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+}
+
+.post h3 {
+  margin: 0 0 10px;
+}
+
+.post p {
+  margin: 0 0 10px;
+}
+
+.post .actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.post .actions .edit-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.post .actions .delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+/* completed rich text editor  */
+
+/* started tendding data this month===================> */
+
+h2.thismonth {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+/* Container for cards */
+.trendingdata {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns per row by default */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Styling for each blog card */
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card .blog-content {
+  padding: 15px;
+}
+
+.blog-card .blog-content h3 {
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+}
+
+.blog-card .blog-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.blog-card .blog-content .tags {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.blog-card .blog-content .author-date {
+  font-size: 0.85rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* end trending data this month =================? */
+
+
+
+
+
+
+
 /* Mobile Menu Styles */
 @media (max-width: 760px) {
   nav ul {
@@ -366,6 +544,9 @@ a:hover {
       display: none;
       
   }
+  main{
+    padding: 10px;
+  }
 
 
   /* ++++++++++++++ home ++++++++++++++++++++++++ */
@@ -385,11 +566,31 @@ a:hover {
 }
 
 
+/* trending this month data for stylig ==================== */
+.trendingdata {
+  grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
 }
 
-/* When the menu is toggled (visible) */
-nav ul.show {
-  display: flex; /* Show the navigation menu */
+.blog-card {
+  max-width: 100%; /* Make cards take up the full width */
 }
+
+h2.thismonth {
+  font-size: 1.75rem; /* Smaller font for heading */
+}
+
+.blog-card .blog-content h3 {
+  font-size: 1.1rem; /* Slightly smaller titles */
+}
+}
+@media (max-width: 570px) {
+  .trendingdata {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns per row on smaller screens */
+  }
+}
+
+
+/* end trending this month data  */
+
 
 
