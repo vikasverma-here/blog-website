@@ -7,8 +7,21 @@
 
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body>
-    <h1 class="notes" >notes</h1>
+<body class="notes-body">
+    <!-- <h1 class="notes" >notes</h1> -->
+
+
+    <div id="notes-app">
+        <h1> Save Your Notes Here</h1>
+        <div id="notes-input">
+          <input type="text" id="notes-title" placeholder="Title" />
+          <textarea id="notes-text" rows="3" placeholder="Write your note..."></textarea>
+          <button id="notes-add">Add Note</button>
+        </div>
+        <div id="notes-container">
+        </div>
+      </div>
+
     <script src="/js/notes.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ function formatText(command) {
     const postList = document.getElementById('post-list');
     const postId = new Date().getTime();
   
-
+   const latest = document.getElementById("latestData")
     const post = document.createElement('div');
     post.className = 'post';
     post.id = `post-${postId}`;
@@ -40,7 +40,8 @@ function formatText(command) {
     `;
   
     postList.appendChild(post);
-  
+    postList.appendChild(latest);
+    
    
     document.getElementById('title').value = '';
     document.getElementById('description').value = '';
