@@ -9,6 +9,8 @@ Live Link
 GitHub Repository
 🐙 https://github.com/vikasverma-here/blog-website
 
+![alt text](./images/Screenshot%202025-01-19%20094814.png)
+
 Folder Structure
    Blog Website 
     ├── images
